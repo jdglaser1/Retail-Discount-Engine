@@ -32,3 +32,37 @@ let products = [{
     inventory: 20,
 },
 ]
+console.log("__________Products__________")
+console.log(products)
+
+// step 3 the for...of loop
+
+for(let product of products){
+    let discount =0
+
+switch(product.category){
+    case "electronics":
+        discount = 0.20
+    break
+    case "apparel":
+        discount = 0.15
+        break
+    case "grocery":
+    case "household":
+        discount = 0.10
+        break
+    default:
+        discount = 0;
+}
+
+let promoPrice = product.price - (product.price * discount);
+product.promoPrice = promoPrice.toFixed(2);
+
+}
+
+
+
+
+
+
+
