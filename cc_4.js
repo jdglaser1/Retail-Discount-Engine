@@ -56,6 +56,7 @@ switch(product.category){
 }
 
 let promoPrice = product.price - (product.price * discount);
+
 product.promoPrice = promoPrice.toFixed(2);
 
 }
@@ -72,7 +73,29 @@ if (customerType == "student"){
     products.price * 1
 }
 
+// step 5 simulating checkout process for 3 customers
 
 
+let customers = [
+    {
+        customerId: 1001,
+        customerType: "regular",
+        cart:{name: "Speakers", count: 2} 
 
+    },
+    {
+        customerId: 1002,
+        customerType: "student",
+        cart:{name: "T-shirt", count: 5} 
 
+    },
+    {
+        customerId: 1003,
+        customerType: "senior",
+        cart:{name: "milk", count: 10} 
+
+    }
+
+]
+
+console.log(customers)
