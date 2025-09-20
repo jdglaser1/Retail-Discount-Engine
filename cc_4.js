@@ -60,7 +60,17 @@ product.promoPrice = promoPrice.toFixed(2);
 
 }
 
+// step 4 customerType discount
 
+let customerType = ["regular","student","senior"]
+
+if (customerType == "student"){
+    products.product * 0.95
+} else if(customerType == "senior"){
+    products.price * 0.93
+} else{
+    products.price * 1
+}
 
 
 
