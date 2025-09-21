@@ -95,7 +95,23 @@ let customers = [
         cart:{name: "milk", count: 10} 
 
     }
-
 ]
 
-console.log(customers)
+// loops through the array of customers and displays their carts
+
+for (let customer of customers){
+    const item = customer.cart.name
+    const quantity = customer.cart.count
+    totalPrice = (quantity * products.price)
+    console.log(`Customer ${customer.customerId}'s cart includes
+        Item: ${customer.cart.name}
+        Quantity: ${customer.cart.count}
+    _______________________________________
+        Total cost: ${totalPrice}
+`)
+}
+
+
+
+
+
